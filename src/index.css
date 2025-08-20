@@ -1,0 +1,103 @@
+/* Import custom animation keyframes */
+@import './assets/css/animations.css';
+
+/* Define CSS variables (Custom Properties) for the color palette */
+:root {
+    --emerald-start: #059669;
+    --emerald-mid: #047857;
+    --emerald-end: #6ee7b7;
+    --gold-start: #f59e0b;
+    --gold-end: #fcd34d;
+    --neutral-bg: #f8fafc;
+    --neutral-text: #4b5563;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--neutral-bg);
+    color: var(--neutral-text);
+    scroll-behavior: smooth;
+}
+
+/* Base heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility classes that use our CSS variables and animations */
+.font-heading { font-family: 'Inter', sans-serif; }
+.font-body { font-family: 'Source Sans Pro', sans-serif; }
+
+.animated-gradient {
+    background: linear-gradient(135deg, var(--emerald-start), var(--emerald-mid), #065f46, var(--emerald-end));
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+.btn-gold-gradient {
+    background-image: linear-gradient(to right, var(--gold-start), var(--gold-end));
+    transition: all 0.3s ease;
+}
+.btn-gold-gradient:hover {
+    box-shadow: 0 10px 20px -10px #f59e0b;
+    transform: translateY(-2px);
+}
+
+.logo-animation {
+    animation: float-animation 6s ease-in-out infinite;
+}
+
+.team-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+.team-card-inner {
+     transform: translateZ(20px);
+}
+
+.partner-carousel .carousel-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+.partner-carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.testimonial-carousel-track {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-input:focus {
+    border-color: var(--emerald-start);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+    outline: none;
+}
