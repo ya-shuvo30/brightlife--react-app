@@ -1,4 +1,5 @@
 import React from 'react';
+import protectiveLogo from '../../assets/images/protective-life-logo.png'; // Import the local logo
 
 const InsurancePartner = () => (
     <section id="insurancepartner" className="py-24 bg-white">
@@ -8,7 +9,7 @@ const InsurancePartner = () => (
                 We are proud to partner with Protective Islami Life Insurance Ltd. to provide our members with the best possible coverage and security.
             </p>
             <div className="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-xl">
-                <img src="Screenshot 2025-08-17 184122.png" alt="Protective Islami Life Ins. Ltd. Logo" className="h-24 mx-auto mb-8"/>
+                <img src={protectiveLogo} alt="Protective Islami Life Ins. Ltd. Logo" className="h-24 mx-auto mb-8"/>
                 <h3 className="text-3xl font-bold text-gray-800 font-heading">Protective Islami Life Ins. Ltd.</h3>
                 <p className="text-gray-600 mt-4 mb-8">
                     Protective Islami Life Insurance Limited (PILIL) is the fastest growing Life Insurance Company in Bangladesh. Being the leading group insurer, PILIL has been working towards financial inclusion; PILIL quite extensively with over 1 Million lives coming under the umbrella of PILIL.
