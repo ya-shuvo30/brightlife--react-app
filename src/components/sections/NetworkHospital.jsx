@@ -19,7 +19,6 @@ const NetworkHospital = () => {
                                 <th scope="col" className="px-6 py-3">Hospital Name</th>
                                 <th scope="col" className="px-6 py-3">Address</th>
                                 <th scope="col" className="px-6 py-3">Facility</th>
-                                <th scope="col" className="px-6 py-3">Special Service</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +29,6 @@ const NetworkHospital = () => {
                                     <td className="px-6 py-4 font-bold text-gray-900">{hospital.name}</td>
                                     <td className="px-6 py-4">{hospital.address}</td>
                                     <td className="px-6 py-4">{hospital.facility}</td>
-                                    <td className="px-6 py-4">{hospital.specialService}</td>
                                 </tr>
                             ))}
                         </tbody>

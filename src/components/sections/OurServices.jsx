@@ -1,8 +1,47 @@
 import React from 'react';
 import Icon from '../shared/Icon';
-import { plans, coreServices } from '../../data/plansData';
+import { coreServices } from '../../data/plansData'; // Note: plans data is now local to this component
 
 const OurServices = () => {
+    const plans = [
+        { 
+            name: 'Silver (1 Year)', 
+            price: '1,500', 
+            features: [
+                '24/7 Tele-Doctor & Specialist Consultation', 
+                'Discounts: Hospital, Medicine (Up to 15%), Shops (Up to 30%)',
+                'Hospitalization: ৳5,000 Cashback (1 Year) & 10 Nights',
+                'Life Coverage: AD ৳100,000 & ND ৳50,000',
+                'Gift & Tour by Lottery'
+            ], 
+            featured: false 
+        },
+        { 
+            name: 'Bronze (2 Years)', 
+            price: '2,500', 
+            features: [
+                'All Silver Features',
+                'Increased Cashback: ৳10,000 (2 Years)',
+                'Increased Stay: 20 Nights',
+                'Life Coverage: AD ৳100,000 & ND ৳50,000',
+                'Gift & Tour by Lottery'
+            ], 
+            featured: false 
+        },
+        { 
+            name: 'Gold (3 Years)', 
+            price: '3,500', 
+            features: [
+                'All Bronze Features',
+                'Highest Cashback: ৳15,000 (3 Years)',
+                'Increased Stay: 30 Nights',
+                'Life Coverage: AD ৳100,000 & ND ৳50,000',
+                'Exclusive Gifts & Tours'
+            ], 
+            featured: true 
+        },
+    ];
+
     return (
         <section id="ourservices" className="py-24 bg-gray-50">
             <div className="container mx-auto px-6">
@@ -27,7 +66,6 @@ const OurServices = () => {
                             <h3 className="text-2xl font-bold text-gray-800 font-heading">{plan.name}</h3>
                             <div className="my-8">
                                 <span className="text-5xl font-extrabold text-gray-900 font-heading">৳{plan.price}</span>
-                                <span className="text-lg text-gray-500 font-medium">{plan.duration}</span>
                             </div>
                             <ul className="space-y-4 mb-8 text-gray-600 font-body flex-grow">
                                 {plan.features.map(feature => (
