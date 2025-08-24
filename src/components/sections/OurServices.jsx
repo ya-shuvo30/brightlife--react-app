@@ -7,6 +7,7 @@ const OurServices = () => {
         { 
             name: 'Silver (1 Year)', 
             price: '1,500', 
+            duration: '/year', 
             features: [
                 '24/7 Tele-Doctor & Specialist Consultation', 
                 'Discounts: Hospital, Medicine (Up to 15%), Shops (Up to 30%)',
@@ -19,6 +20,7 @@ const OurServices = () => {
         { 
             name: 'Bronze (2 Years)', 
             price: '2,500', 
+            duration: '/year', 
             features: [
                 'All Silver Features',
                 'Increased Cashback: ৳10,000 (2 Years)',
@@ -31,6 +33,7 @@ const OurServices = () => {
         { 
             name: 'Gold (3 Years)', 
             price: '3,500', 
+            duration: '/year', 
             features: [
                 'All Bronze Features',
                 'Highest Cashback: ৳15,000 (3 Years)',
@@ -66,6 +69,7 @@ const OurServices = () => {
                             <h3 className="text-2xl font-bold text-gray-800 font-heading">{plan.name}</h3>
                             <div className="my-8">
                                 <span className="text-5xl font-extrabold text-gray-900 font-heading">৳{plan.price}</span>
+                                <span className="text-lg text-gray-500 font-medium">{plan.duration}</span>
                             </div>
                             <ul className="space-y-4 mb-8 text-gray-600 font-body flex-grow">
                                 {plan.features.map(feature => (
